@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light" *ngIf="nav.visible">
+    <div class="container-fluid">
+      <h3><a class="navbar-brand">Home</a></h3>
+      <form class="d-flex">
+        <button
+          class="btn btn-outline-success m-2"
+          type="submit"
+          [routerLink]="'home'"
+        >
+          Home
+        </button>
+        <button
+          class="btn btn-outline-success m-2"
+          type="submit"
+         (click)="onLogout()"
+        >
+          Logout
+        </button>
+      </form>
+    </div>
+  </nav>

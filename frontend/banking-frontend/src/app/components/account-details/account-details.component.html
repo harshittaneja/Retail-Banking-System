@@ -1,0 +1,28 @@
+<table class="table mt-10" *ngIf="!loading">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Customer Id</th>
+        <th scope="col">Account Number</th>
+        <th scope="col">Balance</th>
+        <th scope="col">Account Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{customerDetails[0].customerId}}</td>
+        <td>{{customerDetails[0].accountId}}</td>
+        <td>{{customerDetails[0].balance}}</td>
+        <td>{{customerDetails[0].accountType}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>{{customerDetails[1].customerId}}</td>
+        <td>{{customerDetails[1].accountId}}</td>
+        <td>{{customerDetails[1].balance}}</td>
+        <td>{{customerDetails[1].accountType}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

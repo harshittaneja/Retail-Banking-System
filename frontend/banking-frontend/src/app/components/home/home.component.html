@@ -1,0 +1,53 @@
+
+<div class="card-group m-15">
+  <app-home-card
+    title="Tranfer Money"
+    text="Transfer Money To Your Account"
+    btnText="Transfer"
+    link="account-transfer"
+  ></app-home-card>
+  <app-home-card
+    title="Your Details"
+    text="Your Information"
+    btnText="Get Details"
+    link="user-details"
+  ></app-home-card>
+  <app-home-card
+    title="Withdraw Money"
+    text="Withdraw Money From Your Account"
+    btnText="Withdraw"
+    link="account-withdraw"
+  ></app-home-card>
+  <app-home-card
+    title="Deposit Money"
+    text="Deposit Money To Your Account"
+    btnText="Deposit"
+    link="account-deposit"
+  ></app-home-card>
+  <app-home-card
+    *ngIf="isAdmin"
+    title="Create Customer"
+    text="Create Customer"
+    link="create-customer"
+    btnText="Create"
+  ></app-home-card>
+  <app-home-card
+    title="Account Details"
+    text="Show Account Details"
+    link="account-details"
+    btnText="View Details"
+  ></app-home-card>
+  <!-- <app-home-card
+    title="Transactions Details"
+    text="Show Transaction Details"
+    link="account-transactions"
+    btnText="View Transactions"
+  ></app-home-card> -->
+  <app-home-card
+    title="Transactions Details  "
+    text="Show Transaction Details"
+    link="account-transactions-date"
+    btnText="View Transactions"
+  ></app-home-card>
+  
+</div>

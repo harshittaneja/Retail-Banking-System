@@ -1,0 +1,31 @@
+<div class="center">
+    <h1>Withdraw</h1>
+    <form (ngSubmit)="onWithdraw(withdrawForm)" #withdrawForm="ngForm">
+      <div class="txt_field">
+        <input
+          type="number"
+          required
+          name="amount"
+          placeholder="Enter the amount to deposit"
+          ngModel
+        />
+        <span></span>
+        <label>Amount</label>
+      </div>
+      <div class="txt_field">
+        <input
+          type="number"
+          name="accountId"
+          placeholder="Enter the account number"
+          required
+          ngModel
+        />
+        <span></span>
+        <label>Account Number</label>
+      </div>
+  
+      <input type="submit" value="Withdraw" [disabled]="!withdrawForm.valid" />
+      
+    </form>
+    <h3 class="text-center">{{msg}}</h3>
+  </div>

@@ -1,0 +1,31 @@
+<div class="center">
+  <h1>Deposit</h1>
+  <form (ngSubmit)="onDeposit(depositForm)" #depositForm="ngForm">
+    <div class="txt_field">
+      <input
+        type="number"
+        required
+        name="amount"
+        placeholder="Enter the amount to deposit"
+        ngModel
+      />
+      <span></span>
+      <label>Amount</label>
+    </div>
+    <div class="txt_field">
+      <input
+        type="number"
+        name="accountId"
+        placeholder="Enter the account number"
+        required
+        ngModel
+      />
+      <span></span>
+      <label>Account Number</label>
+    </div>
+
+    <input type="submit" value="Deposit" [disabled]="!depositForm.valid" class="m-3" />
+    
+  </form>
+  <h3 class="text-center">{{msg}}</h3>
+</div>

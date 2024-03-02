@@ -1,0 +1,38 @@
+<div class="center">
+  <h1>Create User</h1>
+  <form (ngSubmit)="onSubmit(createCustomerForm)" #createCustomerForm="ngForm">
+    <div class="txt_field">
+      <input type="text" required name="name" ngModel />
+      <span></span>
+      <label>Name</label>
+    </div>
+    <div class="txt_field">
+      <input type="text" required name="username" ngModel />
+      <span></span>
+      <label>Username</label>
+    </div>
+    <div class="txt_field">
+      <input type="text" required name="password" ngModel />
+      <span></span>
+      <label>Password</label>
+    </div>
+    <div class="txt_field">
+      <input type="text" required name="address" ngModel />
+      <span></span>
+      <label>Address</label>
+    </div>
+    <div class="txt_field">
+      <input type="text" required name="dob" ngModel />
+      <span></span>
+      <label>Date of Birth</label>
+    </div>
+    <div class="txt_field">
+      <input type="text" required name="panNumber" ngModel />
+      <span></span>
+      <label>Pan Number</label>
+    </div>
+
+    <input type="submit" value="Create" [disabled]="!createCustomerForm.valid" />
+  </form>
+  <h3 class="text-center">{{ msg }}</h3>
+</div>

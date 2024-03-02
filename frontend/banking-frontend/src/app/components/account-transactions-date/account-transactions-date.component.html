@@ -1,0 +1,69 @@
+<div class="center" *ngIf="loading">
+    <h1>Transactions Date</h1>
+    <form (ngSubmit)="onClick(transactionsForm)" #transactionsForm="ngForm">
+      <div class="txt_field">
+        <input
+          type="text"
+          required
+          name="startdate"
+          placeholder="Enter the start date (YYYY-MM-DD)"
+          ngModel
+        />
+        <span></span>
+        <label>Start Date</label>
+      </div>
+      <div class="txt_field">
+        <input
+          type="text"
+          name="enddate"
+          placeholder="Enter the end date (YYYY-MM-DD)"
+          required
+          ngModel
+        />
+        <span></span>
+        <label>End Date</label>
+      </div>
+      <div class="txt_field">
+        <input
+          type="number"
+          name="accountNumber"
+          placeholder="Enter the account number"
+          required
+          ngModel
+        />
+        <span></span>
+        <label>Account Number</label>
+      </div>
+  
+      <input type="submit" value="Get Transactions" />
+      
+    </form>
+    <h3 class="text-center">{{msg}}</h3>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Transaction Id</th>
+        <th scope="col">Transaction Status</th>
+        <th scope="col">Transaction Date</th>
+        <th scope="col">Transaction Type</th>
+        <th scope="col">Amount Of Transaction</th>
+        <th scope="col">AccountId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tran of transaction">
+        <th scope="row">#</th>
+        <td>{{ tran.transactionId }}</td>
+        <td>{{ tran.trsansactionStatus }}</td>
+        <td>{{  tran.transactionDate}}</td>
+        <td>{{ tran.transactionType}}</td>
+        <td>{{ tran.amountOfTransaction }}</td>
+        <td>{{ tran.accountId }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+

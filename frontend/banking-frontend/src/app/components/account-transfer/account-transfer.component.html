@@ -1,0 +1,23 @@
+<div class="center">
+    <h1>Transfer</h1>
+    <form (ngSubmit)="onTransfer(transferForm)" #transferForm="ngForm">
+      <div class="txt_field">
+        <input type="number"  name="amount" required ngModel>
+        <span></span>
+        <label>Enter the amount</label>
+      </div>
+      <div class="txt_field">
+        <input type="number"  name="sourceAccountNumber"  placeholder="Enter your account number" required ngModel>
+        <span></span>
+        <label>From</label>
+      </div>
+      <div class="txt_field">
+        <input type="number"  name="destinationAccountNumber"  placeholder="Enter recipient account number" required ngModel>
+        <span></span>
+        <label>From</label>
+      </div>
+      
+      <input type="submit" value="Transfer" [disabled]="!transferForm.valid" class="m-2">
+      <h3 class="text-center">{{msg}}</h3>
+    </form>
+  </div>

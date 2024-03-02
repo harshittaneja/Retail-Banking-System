@@ -1,0 +1,9 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 3%;
+}

@@ -1,0 +1,15 @@
+package com.project.Account.Microservice.model;
+
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class TransactionsHistoryList {
+	
+	private List<TransactionsHistory>transactions;
+}

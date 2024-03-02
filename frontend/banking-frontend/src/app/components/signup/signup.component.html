@@ -1,0 +1,30 @@
+<div class="center">
+  <h1>Create User</h1>
+  <form (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
+    <div class="txt_field">
+      <input type="text" required name="name" ngModel/>
+      <span></span>
+      <label>Name</label>
+    </div>
+    <div class="txt_field">
+      <input type="txt" required name="username" ngModel/>
+      <span></span>
+      <label>Customer Id</label>
+    </div>
+    <div class="txt_field">
+      <input type="password" required name="password" ngModel/>
+      <span></span>
+      <label>Password</label>
+    </div>
+    <label>Select Roles</label>
+    <label class="checkbox-inline m-3">
+      <input type="checkbox" value="admin" name="admin" ngModel>Admin
+    </label>
+    <label class="checkbox-inline m-2">
+      <input type="checkbox" value="user" name="user" ngModel>User
+    </label>
+  
+    <input type="submit" value="Create" />
+  </form>
+  <h1 class="text-center">{{msg}}</h1>
+</div>
